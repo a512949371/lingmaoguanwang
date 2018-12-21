@@ -1,0 +1,135 @@
+<!--pages/shop/shop.wxml-->
+<view class='top-nav-box flex-box fixed-nav' wx:if='{{isfixed}}'>
+   <view class='top-nav flex-box-center' bindtap='Changenav' data-num='0'><image src='{{currentTab===0?"../../images/tab_01.png":"../../images/tab_01-1.png"}}' mode='aspectFit'></image></view>
+   <view class='top-nav flex-box-center' bindtap='Changenav' data-num='1'><image src='{{currentTab===1?"../../images/tab_02.png":"../../images/tab_02-2.png"}}' mode='aspectFit'></image></view>
+   <view class='top-nav flex-box-center' bindtap='Changenav' data-num='2'><image src='{{currentTab===2?"../../images/tab_03.png":"../../images/tab_03-3.png"}}' mode='aspectFit'></image></view>
+  </view>
+<view  class='bg_one' bindtap='Closechangeshop'>
+  <view class='top-img'>
+   <image src='http://zerocatimg.zhsjgroup.cn/pic_top.png'> </image>
+  </view>
+  <view class='top-nav-box flex-box ' style='opacity:{{isfixed?"0":"1"}}' >
+   <view class='top-nav flex-box-center' bindtap='Changenav' data-num='0'><image src='{{currentTab===0?"../../images/tab_01.png":"../../images/tab_01-1.png"}}' mode='aspectFit'></image></view>
+   <view class='top-nav flex-box-center' bindtap='Changenav' data-num='1'><image src='{{currentTab===1?"../../images/tab_02.png":"../../images/tab_02-2.png"}}' mode='aspectFit'></image></view>
+   <view class='top-nav flex-box-center' bindtap='Changenav' data-num='2'><image src='{{currentTab===2?"../../images/tab_03.png":"../../images/tab_03-3.png"}}' mode='aspectFit'></image></view>
+  </view>
+  <swiper class="tab-content " current="{{currentTab}}" duration="100" bindchange="switchTab" style="height:{{230*actlength}}rpx">
+        <swiper-item>
+                <block wx:for="{{tab1}}" wx:key="{{item.goodId}}" wx:for-item="sList">
+                   <view class='bg_two'>
+                    <view class="shop-list flex-box-btween">
+                        <view class="shop-list-img">
+                            <image src="{{imgUrl+sList.goodImg}}" class="list-img" />
+                        </view>
+                        <view class="shop-list-info" data-id="{{sList.goodId}}">
+                            <view class="list-info-name flex-box-btween">
+                             <view class='shop-name'>{{sList.goodName}}</view>
+                             <view class='list-info-price'>{{sList.goodPrice}}元</view>
+                            </view>
+                            <view class="list-info-remark flex-box-btween">
+                             <view class='shop-name'>{{sList.goodRemark}}</view>
+                             <view class="stepper flex-box">
+                              <text class="normal" hidden='{{sList.goodNum == null || sList.goodNum < 1}}' bindtap="bindMinus" data-tab="{{sList.tab}}" data-index='{{sList.index}}'>-</text>
+                              <input type="number" disabled value="{{sList.goodNum}}" hidden='{{sList.goodNum == null || sList.goodNum < 1}}'/>
+                            <text class="normal" bindtap="bindPlus" data-status="{{sList.saleOut}}" data-tab="{{sList.tab}}" data-index='{{sList.index}}' data-maxlen="{{sList.maxNum}}" data-gnum="{{sList.goodNum}}">+</text>
+                        </view>
+                            </view>
+                        </view>
+                        
+                    </view>
+                    </view>
+                </block>
+        </swiper-item>
+        <swiper-item>
+                <block wx:for="{{tab2}}" wx:key="{{item.goodId}}" wx:for-item="sList">
+                    <view class='bg_two'>
+                    <view class="shop-list flex-box-btween">
+                        <view class="shop-list-img">
+                            <image src="{{imgUrl+sList.goodImg}}" class="list-img" />
+                        </view>
+                        <view class="shop-list-info" data-id="{{sList.goodId}}">
+                            <view class="list-info-name flex-box-btween">
+                             <view class='shop-name'>{{sList.goodName}}</view>
+                             <view class='list-info-price'>{{sList.goodPrice}}元</view>
+                            </view>
+                            <view class="list-info-remark flex-box-btween">
+                             <view class='shop-name'>{{sList.goodRemark}}</view>
+                             <view class="stepper flex-box">
+                              <text class="normal" hidden='{{sList.goodNum == null || sList.goodNum < 1}}' bindtap="bindMinus" data-tab="{{sList.tab}}" data-index='{{sList.index}}'>-</text>
+                              <input type="number" disabled value="{{sList.goodNum}}" hidden='{{sList.goodNum == null || sList.goodNum < 1}}'/>
+                            <text class="normal" bindtap="bindPlus" data-status="{{sList.saleOut}}" data-tab="{{sList.tab}}" data-index='{{sList.index}}' data-maxlen="{{sList.maxNum}}" data-gnum="{{sList.goodNum}}">+</text>
+                        </view>
+                            </view>
+                        </view>
+                        
+                    </view>
+                    </view>
+                </block>
+        </swiper-item>
+        <swiper-item>
+                <block wx:for="{{tab3}}" wx:key="{{item.goodId}}" wx:for-item="sList">
+                    <view class='bg_two'>
+                    <view class="shop-list flex-box-btween">
+                        <view class="shop-list-img">
+                            <image src="{{imgUrl+sList.goodImg}}" class="list-img" />
+                        </view>
+                        <view class="shop-list-info" data-id="{{sList.goodId}}">
+                            <view class="list-info-name flex-box-btween">
+                             <view class='shop-name'>{{sList.goodName}}</view>
+                             <view class='list-info-price'>{{sList.goodPrice}}元</view>
+                            </view>
+                            <view class="list-info-remark flex-box-btween">
+                             <view class='shop-name'>{{sList.goodRemark}}</view>
+                             <view class="stepper flex-box">
+                              <text class="normal" hidden='{{sList.goodNum == null || sList.goodNum < 1}}' bindtap="bindMinus" data-tab="{{sList.tab}}" data-index='{{sList.index}}'>-</text>
+                              <input type="number" disabled value="{{sList.goodNum}}" hidden='{{sList.goodNum == null || sList.goodNum < 1}}'/>
+                            <text class="normal" bindtap="bindPlus" data-status="{{sList.saleOut}}" data-tab="{{sList.tab}}" data-index='{{sList.index}}' data-maxlen="{{sList.maxNum}}" data-gnum="{{sList.goodNum}}">+</text>
+                        </view>
+                            </view>
+                        </view>
+                        
+                    </view>
+                    </view>
+                </block>
+        </swiper-item>
+    </swiper>
+</view>
+<!--结算栏  -->
+  <view class='fixed-buy'>
+   <view class='pos fixed-box'>
+    <view class='store_top'>
+        <view class='store_dialog' hidden='{{isBlance}}'>
+            <view class='flex-box-btween text-box'>
+                <text>已选商品（{{sumNum}}）</text>
+                <text class='clear-box' bindtap='Clearselect'>清空</text>
+            </view>
+            <scroll-view scroll-y style='display:flex;flex:1;'>
+                <view class='store_dialog_info flex-box-btween' wx:for='{{addlist}}' wx:key='' hidden='{{item.goodNum==null||item.goodNum<1}}'>
+                    <text style='flex:1'>{{item.goodName}}</text>
+                    <view class='flex-box'>
+                     <text >¥{{item.goodPrice}}</text>
+                     <view class='store_list_btn flex-box-center'>
+                        <text class='store_list_btn_btn' bindtap='bindMinus' data-tab="{{item.tab}}" data-index='{{item.index}}'>-</text>
+                        <view class="store_list_btn_val">{{item.goodNum}}</view>
+                        <text class='store_list_btn_btn' bindtap='bindPlus' data-status="{{item.saleOut}}" data-tab="{{item.tab}}" data-index='{{item.index}}' data-maxlen="{{item.maxNum}}" data-gnum="{{item.goodNum}}">+</text>
+                    </view>
+                    </view>
+                    
+                </view>
+            </scroll-view>
+        </view>
+        <view class='store_blance'>
+            <view class='store_blance_info' bindtap='showCart'>
+               <block wx:if="{{totalprice>0}}">
+                <text style='margin-left:200rpx;'>共<text class='num-box'>{{totalprice}}</text>元</text>
+                </block>
+            </view>
+            <view class='store_blance_buy' bindtap='toBuy'>结算</view>
+        </view>
+    </view>
+  </view>
+  <view class='fixed-cart' bindtap='showCart'>
+      <view class='dot'>{{sumNum}}</view>
+      <image src='../../images/ml.png' style='width:100rpx;height:100rpx'></image>
+  </view>
+</view>

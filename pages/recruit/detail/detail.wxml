@@ -1,0 +1,32 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="r-detail">
+        <view>
+            <view class="detail-info-title">
+                <text class="info-title-type">{{rData.offerName}}</text>
+                <text class="info-title-income">{{rData.salaryRange}}</text>
+            </view>
+            <view class="detail-info-desc">
+                <view class="info-desc">
+                    <image src="../../../../images/icon_dw.png" style="width:21rpx; height:24rpx;" />{{rData.workAddress}}</view>
+                <view class="info-desc">
+                    <image src="../../../../images/icon_jy.png" style="width:26rpx; height:24rpx;" />{{rData.workYear}}</view>
+                <view class="info-desc">
+                    <image src="../../../../images/icon_xl.png" style="width:27rpx; height:24rpx;" />{{rData.schooling}}</view>
+            </view>
+            <view class="detail-info-more">
+                <text class="info-more-title">职位详情</text>
+                <view class="info-more-content">
+                    <template is="wxParse" data="{{wxParseData: recruitProfile.nodes}}" />
+                </view>
+            </view>
+        </view>
+        <view class='map-box'>
+        <map id="map" longitude="102.747751" latitude="24.957532" scale="18" controls="{{controls}}" markers="{{markers}}" show-location style="width: 100%; height: 300px;" wx:if="{{isshowmap}}"></map>
+        </view>
+    <view class="detail-info-att">
+        <view class="info-att">
+            <image src="../../../../images/icon_ts.png" style="width:25rpx; height:24rpx;" /> 温馨提示
+            <text class="info-att-text">本公司承诺名下所有职位不向您收费，如有不实，请立即投诉。</text>
+        </view>
+    </view>
+</view>

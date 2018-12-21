@@ -1,0 +1,34 @@
+<!--pages/oursservice/oursservice.wxml-->
+<view>
+  <view class='top-bg'>
+    <image class='big-img' src='../../images/top-img.png' bindtap='Goshop'></image>
+    <view class='order-box flex-box-center' bindtap='Goorder'>
+    <view>订单</view>
+    <image class='small-img' src='../../images/icon_right.png'></image>
+    </view>
+  </view>
+
+  <view class="company-advantage" >
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >企业服务</text>
+        </view>
+        <view class='list-box'>
+         <block wx:for="{{listdata}}" wx:key="{{item.id}}">
+          <view class='list-data flex-box' bindtap="DetailInfo" data-id="{{item.productId}}">
+           <image class='list-data-img' src="{{imgUrl+item.productImg}}"></image>
+           <view class='info-box'>
+            <view class='info-name'>{{item.title}}</view>
+            <view class='infp-desc'>零猫为您提供安全，稳定，极速的服务质量</view>
+            <view class='info-btn-box'>
+              <view class='info-btn'>立即续费</view>
+            </view>
+           </view>
+          </view>
+          </block>
+        </view>
+    </view>
+<view class='fixed-call'>
+     <image src='../../images/call.png' bindtap='Callme'></image>
+    </view>
+</view>

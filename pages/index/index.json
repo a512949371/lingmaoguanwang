@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "Slidercomponent": "../../template/banner/banner"
+  }
+}

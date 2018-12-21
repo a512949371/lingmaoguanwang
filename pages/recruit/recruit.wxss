@@ -1,0 +1,72 @@
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.r-list {
+    height: 100%;
+    background: #F8f8f8;
+}
+
+.img-banner {
+    width: 750rpx;
+    height: 483rpx;
+    display: block;
+}
+
+.img-banner image {
+    width: 100%;
+    height: 100%;
+}
+
+.r-list-info {
+    padding: 30rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.list-info-title {
+    display: inline-block;
+}
+
+.info-title-type {
+    font-size: 34rpx;
+    color: #494949;
+    font-weight: bold;
+    display: inline-block;
+    width: 500rpx;
+}
+
+.info-title-income {
+    font-size: 30rpx;
+    color: #FD5C60;
+    display: inline-block;
+    text-align: right;
+    width: 190rpx;
+    font-weight: bold;
+}
+
+.list-info-desc {
+    display: inline-block;
+    width: 100%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.list-info-desc text {
+    padding: 0 5px;
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    text-align: center;
+    display: inline-block;
+    background: #F8F8F8;
+    margin-right: 30rpx;
+    color: #a7a7a7;
+}
+
+.list-info-address {
+    font-size: 28rpx;
+    color: #646464;
+    text-align: left;
+}

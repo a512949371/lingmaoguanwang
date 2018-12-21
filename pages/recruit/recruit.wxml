@@ -1,0 +1,19 @@
+<scroll-view scroll-y class="r-list">
+    <view class="img-banner">
+        <image src="/images/zp_banner.png" />
+    </view>
+    <block wx:for="{{recruit}}" wx:key="item">
+        <view class="r-list-info" data-id="{{item.id}}" bindtap="rDetail">
+            <view class="list-info-title" data-id="{{item.id}}">
+                <text class="info-title-type">{{item.offerName}}</text>
+                <text class="info-title-income">{{item.salaryRange}}</text>
+            </view>
+            <view class="list-info-desc" data-id="{{item.id}}">
+                <text>{{item.workAddress}}</text>
+                <text>{{item.workYear}}</text>
+                <text>{{item.schooling}}</text>
+            </view>
+            <text class="list-info-address" data-id="{{item.id}}">{{item.workAddress}}</text>
+        </view>
+    </block>
+</scroll-view>

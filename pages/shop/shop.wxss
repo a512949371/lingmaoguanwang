@@ -1,0 +1,267 @@
+/* pages/shop/shop.wxss */
+.flex-box{
+  display: flex;
+  align-items: center;
+}
+.flex-box-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column
+}
+.flex-box-btween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.flex-box-center{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.flex-box-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.pt100{
+  padding-top: 100rpx;
+}
+.pos{
+  position: relative;
+}
+page{
+  width: 100%;
+  min-height: 100%;
+  background: url('http://zerocatimg.zhsjgroup.cn/pic_bottom01.png') no-repeat top center;
+  background-size: 100%;
+}
+.bg_two{
+background: url('http://zerocatimg.zhsjgroup.cn/pic_bottom01.png') no-repeat top center;
+background-size: 100%;
+padding: 0 40rpx;
+padding-bottom: 40rpx;
+}
+.top-img{
+  width: 100%;
+}
+.top-img image{
+  width: 750rpx;
+  height: 576rpx;
+  display: block
+}
+.top-nav-box{
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-bottom: 40rpx;
+  background: url('http://zerocatimg.zhsjgroup.cn/tab_bg.png') no-repeat top center;
+  background-size: 100%;
+}
+.top-nav{
+  flex: 1
+}
+.top-nav image{
+  width: 186rpx;
+  height: 99rpx;
+}
+.fixed-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999
+}
+.mg20{
+  margin: 0 40rpx;
+}
+.tab-content{
+  padding-bottom: 60rpx;
+}
+.shop-list {
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 20rpx;
+}
+
+.shop-list-img {
+    width: 150rpx;
+    height: 150rpx;
+    background: #F5F5F5;
+}
+
+.shop-list-img image {
+    width: 150rpx;
+    height: 150rpx;
+    display:block;
+}
+
+.shop-list-info {
+   padding-left: 20rpx;
+   flex: 1
+}
+
+.shop-list-info .list-info-name {
+    font-size: 34rpx;
+    /* font-weight: bold; */
+    color: #1e1e1e;
+}
+
+.shop-list-info .list-info-remark {
+    font-size: 24rpx;
+    color: #646464;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.shop-list-info .list-info-price {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #FF6B4E;
+}
+.shop-name{
+  flex: 1;
+  padding-right: 20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+.text-box{
+  padding: 20rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #e5e5e5
+}
+.store_list_btn{
+  padding: 0 30rpx;
+}
+.store_list_btn view{
+  flex: 1;
+  text-align: center
+}
+.store_list_btn_val{
+  width: 60rpx;
+}
+.store_list_btn_btn{
+    width: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    text-align: center;
+    background: #C62E2E;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #fff
+}
+/*加号和减号*/
+.stepper text {
+    width: 50rpx;
+    height: 50rpx;
+    line-height: 48rpx;
+    text-align: center;
+    float: right;
+    background: #C62E2E;
+    border-radius: 50%;
+    font-weight: bold;
+
+}
+.normal{
+    color: #fff;
+    font-size: 36rpx;
+}
+
+/*数值*/
+
+.stepper input {
+    font-size: 16px;
+    width: 80rpx;
+    text-align: center
+}
+.fixed-buy{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow: visible;
+}
+.store_top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.store_dialog_bg {
+    width: 100%;
+    flex: 1;
+    background: #000;
+    opacity: 0.2;
+}
+
+.store_dialog {
+    width: 100%;
+    height: 400rpx;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.store_dialog_info {
+    display: flex;
+    align-items: center;
+    width: 730rpx;
+    margin-left: 20rpx;
+    padding-bottom: 20rpx;
+    margin-top: 20rpx;
+    border-bottom: 3rpx solid #eee;
+    font-size: 28rpx;
+}
+
+.store_blance {
+    width: 100%;
+    height: 100rpx;
+    background: #323232;
+    display: flex;
+    color: #f5f5f5;
+}
+
+.store_blance_info {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.store_blance_buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #C62E2E;
+    color: #fff;
+    width: 200rpx;
+}
+
+.fixed-cart {
+    position:absolute;
+    bottom: 30rpx;
+    left: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    z-index: 1000;
+    overflow: visible
+}
+
+.fixed-cart .dot {
+    position: absolute;
+    left: 85rpx;
+    top: 0;
+    z-index: 1001;
+    border-radius: 50%;
+    background-color: #f00;
+    color: #FFF;
+    width: 40rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    border: 1px solid #FFF;
+}
+.num-box{
+  padding: 0 20rpx;
+}

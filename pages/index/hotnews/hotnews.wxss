@@ -1,0 +1,4 @@
+/* pages/index/hotnews/hotnews.wxss */
+.pd40{
+  padding: 40rpx;
+}

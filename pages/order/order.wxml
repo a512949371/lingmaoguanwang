@@ -1,0 +1,123 @@
+<view>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">全部</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">待付款</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">已付款</view>
+        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">退款</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="100" bindchange="switchTab" style="height:{{winHeight}}rpx">
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h">
+                <block wx:for="{{sellListAll}}" wx:key="{{index}}" wx:for-item="sList">
+                    <view class="order-list" bindtap="gotoPay" data-type="{{sList.orderType}}" data-num="{{sList.orderNo}}" data-status="{{sList.orderStatus}}">
+                        <view class="order-id flex-box-btween">
+                            <text class="order-num">订单编号：{{sList.orderNo}}</text>
+                            <view>
+                              <text class="order-status-Obligation" wx:if="{{sList.orderStatus == 0}}">待付款</text>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 3}}">已退款</text>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 4}}">已付款</text>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 5}}">待审核</text>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 6}}">退款失败</text>
+                            </view>
+                        </view>
+                        <view class="item-history flex-box" wx:for="{{sList.products}}" wx:key="{{pList.productId}}"  wx:for-item="pList">
+                            <view class="avatar">
+                                <image class="history-img" src="{{imgUrl+pList.productImg}}"></image>
+                            </view>
+                            <view class=" {{(sList.products.length - 1 === index) ? 'item-Info-last' : 'item-Info'}}">
+                                <view class="history-name flex-box-btween">
+                                <view>{{pList.productName}}</view>
+                                <text class="history-num">{{pList.productNum}}*{{pList.productUnit}}</text>
+                                </view>
+                                <view class="history-time">{{sList.buyTime}}</view>
+                                <view class="history-price">￥{{pList.productPrice}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h">
+                <block wx:for="{{sellListObligation}}" wx:key="{{index}}" wx:for-item="sList">
+                    <view class="order-list" bindtap="gotoPay" data-type="{{sList.orderType}}" data-num="{{sList.orderNo}}" data-status="{{sList.orderStatus}}">
+                        <view class="order-id flex-box-btween">
+                            <text class="order-num">订单编号：{{sList.orderNo}}</text>
+                            <view>
+                              <text class="order-status-Obligation" wx:if="{{sList.orderStatus == 0}}">待付款</text>
+                            </view>
+                        </view>
+                        <view class="item-history flex-box" wx:for="{{sList.products}}" wx:key="{{pList.productId}}"  wx:for-item="pList">
+                            <view class="avatar">
+                                <image class="history-img" src="{{imgUrl+pList.productImg}}"></image>
+                            </view>
+                            <view class=" {{(sList.products.length - 1 === index) ? 'item-Info-last' : 'item-Info'}}">
+                                <view class="history-name flex-box-btween">
+                                <view>{{pList.productName}}</view>
+                                <text class="history-num">{{pList.productNum}}*{{pList.productUnit}}</text>
+                                </view>
+                                <view class="history-time">{{sList.buyTime}}</view>
+                                <view class="history-price">￥{{pList.productPrice}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h">
+                <block wx:for="{{sellListPayment}}" wx:key="{{index}}" wx:for-item="sList">
+                    <view class="order-list">
+                        <view class="order-id flex-box-btween">
+                            <text class="order-num">订单编号：{{sList.orderNo}}</text>
+                            <view>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 4}}">已付款</text>
+                            </view>
+                        </view>
+                        <view class="item-history flex-box" wx:for="{{sList.products}}" wx:key="{{pList.productId}}"  wx:for-item="pList">
+                            <view class="avatar">
+                                <image class="history-img" src="{{imgUrl+pList.productImg}}"></image>
+                            </view>
+                            <view class=" {{(sList.products.length - 1 === index) ? 'item-Info-last' : 'item-Info'}}">
+                                <view class="history-name flex-box-btween">
+                                <view>{{pList.productName}}</view>
+                                <text class="history-num">{{pList.productNum}}*{{pList.productUnit}}</text>
+                                </view>
+                                <view class="history-time">{{sList.buyTime}}</view>
+                                <view class="history-price">￥{{pList.productPrice}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <scroll-view scroll-y="true" class="scoll-h">
+                <block wx:for="{{sellListRefund}}" wx:key="{{index}}" wx:for-item="sList">
+                    <view class="order-list">
+                        <view class="order-id flex-box-btween">
+                            <text class="order-num">订单编号：{{sList.orderNo}}</text>
+                            <view>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 3}}">已退款</text>
+                              <text class="order-status" wx:if="{{sList.orderStatus == 6}}">退款失败</text>
+                            </view>
+                        </view>
+                        <view class="item-history flex-box" wx:for="{{sList.products}}" wx:key="{{pList.productId}}"  wx:for-item="pList">
+                            <view class="avatar">
+                                <image class="history-img" src="{{imgUrl+pList.productImg}}"></image>
+                            </view>
+                            <view class=" {{(sList.products.length - 1 === index) ? 'item-Info-last' : 'item-Info'}}">
+                                <view class="history-name flex-box-btween">
+                                <view>{{pList.productName}}</view>
+                                <text class="history-num">{{pList.productNum}}*{{pList.productUnit}}</text>
+                                </view>
+                                <view class="history-time">{{sList.buyTime}}</view>
+                                <view class="history-price">￥{{pList.productPrice}}</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

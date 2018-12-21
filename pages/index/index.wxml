@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<!--index.wxml-->
+<view class="container" >
+    <view class='hotnews-box flex-box'>
+      <view class='hotnews-tip'>热门</view>
+      <view class='hotnews' bindtap='Gohotnews' data-id='{{notice.id}}'>{{notice.title}}</view>
+    </view>
+    <view class="top-banner flex-box" wx:if="{{showBanner}}">
+        <swiper class="banner-scroll" indicator-dots="{{indicatorDots}}"  interval="{{interval}}" circular="true" duration="{{duration}}" bindchange="_changeSwiper" autoplay='true'>
+            <block wx:for="{{bannerList}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image src="{{imgUrl+item.bannerImg}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class='dotstyle flex-box'>
+        <block wx:for="{{bannerList}}">
+          <view class="dot {{swiperIndex==index?'active':''}}"></view>
+        </block>
+        </view>
+    </view>
+    <view class="reserve-store pt20" wx:if="{{showStore}}">
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >喵家主营业务</text>
+        </view>
+        <Slidercomponent sliderdata="{{serviceList}}" bind:Godetail="Goreserve" />
+    </view>
+    <view class="company-advantage" >
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >{{advservername}}</text>
+        </view>
+        <view class='pt20'>
+        <view class="company-advantage-list flex-box" wx:for="{{advserverlist}}" wx:key="{{index}}" bindtap="serviceProfile" data-id="{{item.id}}">
+            <image class="adv-img" src="{{imgUrl+item.logoImg}}" />
+            <view class="adv-text">
+                <text class="adv-title">{{item.title}}</text>
+                <text class="adv-desc">{{item.description}}</text>
+            </view>
+        </view>
+        </view>
+    </view>
+    <view class="company-adv pt20" wx:if="{{showAdvantage}}">
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >喵家优势</text>
+        </view>
+        <scroll-view class='adv-scroll-box pt20' scroll-x>
+            <view class='flex-box ' style='width:{{344*advlist.length}}rpx'>
+             <view class='adv-box' wx:for="{{advlist}}" wx:key="{{index}}">
+              <view class='box-bg flex-box-column'>
+               <image class="adv-img" src='{{imgUrl+item.imgUrl}}'></image>
+               <view class="adv-title">{{item.title}}</view>
+               <view class="adv-desc">{{item.content}}</view>
+              </view>
+             </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="company-honor pt20" wx:if="{{showHonor}}">
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >{{honorTitle}}</text>
+        </view>
+        <scroll-view class='honorview ' scroll-x >
+            <view class='honor-pic' style='width:{{230*honorpic.length+40}}rpx'>
+                <view class="honor-pic-item" wx:for="{{honorpic}}" wx:key="{{index}}">
+                    <image src="{{imgUrl+item.honorImg}}"></image>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="company-recruit pt20" wx:if="{{showRecruit}}">
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >{{recruitTitle}}</text>
+        </view>
+        <view class='pl40 pr40 '>
+          <view class="company-recruit-list flex-box-btween" wx:for="{{recruitList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="recruitList">
+              <view class="recruit-text flex-box" >
+                  <image class='company-recruit-img' src="{{imgUrl+item.imgUrl}}"></image>
+                  <view class='pl40'>
+                    <text class="recruit-text-title">{{item.offerName}}</text>
+                    <text class="recruit-desc">{{item.detailContent}}</text>
+                  </view>
+              </view>
+              <view class='recruit-leftbtn'><image src="../../images/Btn.png" /></view>
+          </view>
+        </view>
+        
+    </view>
+    <view class='fixed-call'>
+     <image src='../../images/call.png' bindtap='Callme'></image>
+    </view>
+</view>
+<!-- <import src="../../tabbar/tabbar.wxml" />
+<template is="tabBar" data="{{tabBar}}" /> -->

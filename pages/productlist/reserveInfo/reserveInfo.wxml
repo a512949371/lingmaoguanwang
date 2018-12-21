@@ -1,0 +1,12 @@
+<!--pages/reserve/reserveInfo/reserveInfo.wxml-->
+<view class='body_column_c'>
+    <swiper class="index-banner" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{4000}}" duration="{{1000}}" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <view class='swiper_item' style='background:url("{{imgUrl+item.childBackImg}}") no-repeat center center;background-size:contain'>
+                    <image src="{{imgUrl+item.childImg}}" style='width:60%;height:80%;margin-top:8%;' class="slide-image" />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

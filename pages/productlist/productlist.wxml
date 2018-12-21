@@ -1,0 +1,47 @@
+<!--pages/productlist/productlist.wxml-->
+<view class='pb80 pt40'>
+ <view class='flex-box-center'>
+    <view class='list-nav flex-box'>
+       <view class='box {{shopactindex==1?"active":""}}' data-num='1' bindtap='Scrollshop'>互联网产品</view>
+       <view class='box {{shopactindex==2?"active":""}}' data-num='2' bindtap='Scrollshop'>物联网产品</view>
+    </view>
+ </view>
+  <view class='product-list-box'>
+   <view style='width:{{screenwidth*2}}px' class='product-box' animation="{{shopactindex==1?animationleft:animationright}}">
+    <view class='product-list ' style='width:{{screenwidth}}px'>
+    <block wx:for="{{shoplist}}" wx:key="{{item.id}}" >
+     <view class='data-box' data-id="{{item.id}}" bindtap='Godetail'>
+      <image src="{{imgUrl+item.productimg}}" class='shop-img'></image>
+      <view class='shop-name'>{{item.productname}}</view>
+     </view>
+     </block>
+    </view>
+    <view class='product-list ' style='width:{{screenwidth}}px'>
+    <block wx:for="{{productinfolist}}" wx:key="{{item.id}}" >
+     <view class='wl-data-box' data-id="{{item.id}}" bindtap='Godetail'>
+      <image src="{{imgUrl+item.productimg}}" class='shop-img'></image>
+      <view class='shop-name'>{{item.productname}}</view>
+     </view>
+     </block>
+     </view>
+   </view>
+  </view>
+
+<view class="reserve-store" >
+        <view class="reserve-title flex-box">
+        <view class='verticalline'></view>
+        <text >喵家展示厅</text>
+        </view>
+        <scroll-view class='reserveview'   scroll-x>
+            <view class='reserve-pic' style='width:{{screenwidth*comprodunctlist.length/2.5}}px'>
+                <view class="reserve-pic-item" wx:for="{{comprodunctlist}}" wx:key="{{index}}" bindtap='Clicknav' data-id='{{item.id}}'>
+                    <image src="{{imgUrl+item.imgUrl}}" class='comprodunct-img'></image>
+                    <view class='text'>{{item.productName}}</view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+<view class='fixed-call'>
+     <image src='../../images/call.png' bindtap='Callme'></image>
+    </view>
+</view>

@@ -1,0 +1,12 @@
+<!--pages/productlist/detail/detail.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class='pd40'>
+<!-- <view class='shop-name'>{{shopdata.productname}}</view>
+<view class='flex-box'>
+  <image src='{{imgUrl+shopdata.productimg}}' mode='aspectFit'></image>
+</view> -->
+<view >
+ <template is="wxParse" data="{{wxParseData: webdata.nodes}}" />
+</view>
+</view>
+

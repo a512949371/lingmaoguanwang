@@ -1,0 +1,4 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<scroll-view scroll-y class="wxParse">
+    <template is="wxParse" data="{{wxParseData: companyProfile.nodes}}" />
+</scroll-view>

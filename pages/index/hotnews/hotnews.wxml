@@ -1,0 +1,6 @@
+<!--pages/index/hotnews/hotnews.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class='pd40'>
+ <template is="wxParse" data="{{wxParseData: newdata.nodes}}" />
+</view>
+

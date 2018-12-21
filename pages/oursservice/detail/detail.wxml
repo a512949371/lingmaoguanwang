@@ -1,0 +1,41 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<scroll-view class="content" scroll-y>
+    <view class="title">
+        <text class="title-main">{{itemName}}</text>
+        <text class="title-des">{{itemDescription}}</text>
+    </view>
+    <view class="pro-main">
+        <view wx:for="{{prices}}" class="pro-list" wx:key="item">
+            <view class="pro-type">
+                <text>{{item.vision}}</text>
+            </view>
+            <view class="pro-info">
+                <view class="pro-info-num">{{item.unit}}</view>
+                <view class="pro-info-price">{{item.price}}
+                    <text class="info-price-yen">元</text>
+                </view>
+                <view class="pro-info-buy" bindtap="confirmInfo" data-id="{{item.priceId}}" data-price="{{item.price}}">购买</view>
+            </view>
+        </view>
+    </view>
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData: desc.nodes}}" />
+    </view>
+</scroll-view>
+<view class="modal-zerobox" wx:if="{{showOrderInfo}}">
+    <view class='zero-shaw'></view>
+    <view class="modal-zero {{changetop ? 'zero-top':''}}">
+        <view class="modal-title">尊敬的用户您好，请输入您的信息，零猫会为您进行最好的服务！</view>
+        <view class="modal-content">
+            <view class="modal-input">
+                <input type="text" placeholder="请输入公司名称" adjust-position="true" bindfocus='ChangeCname' bindblur='ChangeCname'></input>
+                <input type="text" placeholder="请输入项目名称" adjust-position="true" bindfocus='ChangePname' bindblur='ChangePname'></input>
+                <input type="number" placeholder="请输入手机号码" adjust-position="true" bindfocus='ChangePnum' bindblur='ChangePnum' bindinput="ChangePnum"></input>
+            </view>
+        </view>
+        <view class="modal-footer">
+            <view class="btn-cancel" bindtap="Zerocancel" data-status="cancel">取消</view>
+            <view class="btn-confirm" bindtap="buyProduct" data-status="confirm">确定</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,131 @@
+/* pages/productlist/productlist.wxss */
+.flex-box{
+  display: flex;
+  align-items: center;
+}
+.flex-box-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column
+}
+.flex-box-btween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.flex-box-center{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.flex-box-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.pt40{
+  padding-top: 40rpx;
+}
+.pb80{
+  padding-bottom: 80rpx;
+}
+.list-nav{
+  border-radius: 10rpx;
+  background-color: #ededed;
+}
+.list-nav .box{
+  border: 3px solid #ededed;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #787878;
+  padding: 10rpx 30rpx;
+}
+.list-nav .box.active{
+  background-color: #fff;
+  color: #141414;
+}
+.product-list-box{
+  width: 100%;
+  overflow: hidden;
+}
+.product-box{
+  display: flex
+}
+.product-list{
+  padding: 40rpx 20rpx;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.product-list .data-box{
+  padding: 0 20rpx;
+  width: 50%;
+  box-sizing: border-box;
+}
+.product-list .wl-data-box{
+ padding: 0 20rpx;
+ width: 100%;
+ box-sizing: border-box
+}
+.product-list .wl-data-box .shop-img{
+  width: 672rpx;
+  height: 390rpx;
+}
+.product-list .shop-img{
+  width: 320rpx;
+  height: 214rpx;
+}
+.product-list .shop-name{
+  font-size: 28rpx;
+  color: #191919;
+  padding: 20rpx 0;
+  text-align: center;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
+.reserveview{
+  display: flex;
+  width: 100%;
+}
+.verticalline{
+  width: 4rpx;
+  height: 30rpx;
+  background-color: #C62E2E;
+  margin-right: 20rpx;
+}
+.reserve-title {
+    padding: 0 40rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+.reserve-pic {
+  display: flex;
+  padding-top: 20rpx;
+}
+.reserve-pic-item{
+  padding: 30rpx;
+}
+.reserve-pic-item image {
+    width: 268rpx;
+    height: 524rpx;
+}
+
+.reserve-pic-item .text {
+    font-size: 26rpx;
+    text-align: center;
+    color: #1E1E1E;
+    font-weight: bold;
+}
+.fixed-call{
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.fixed-call image{
+  width: 114rpx;
+  height: 114rpx;
+}

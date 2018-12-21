@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/befindex/befindex",
+    "pages/order/order",
+    "pages/shop/shop",
+    "pages/index/index",
+    "pages/contactus/contactus",
+    "pages/oursservice/oursservice",
+    "pages/oursservice/detail/detail",
+    "pages/productlist/productlist",
+    "pages/contactus/profile/profile",
+    "pages/recruit/recruit",
+    "pages/recruit/detail/detail",
+    "pages/logs/logs",
+    "pages/productlist/reserveInfo/reserveInfo",
+    "pages/productlist/detail/detail",
+    "pages/index/servicedetail/servicedetail",
+    "template/banner/banner",
+    "pages/index/hotnews/hotnews"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1e1e1e",
+    "navigationBarTitleText": "零猫官网",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "color": "#b4b4b4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon_index-1.png",
+        "selectedIconPath": "/images/icon_index.png"
+      },
+      {
+        "pagePath": "pages/productlist/productlist",
+        "text": "产品",
+        "iconPath": "/images/icon_product-1.png",
+        "selectedIconPath": "/images/icon_product.png"
+      },
+      {
+        "pagePath": "pages/oursservice/oursservice",
+        "text": "服务",
+        "iconPath": "/images/icon_service-1.png",
+        "selectedIconPath": "/images/icon_service.png"
+      },
+      {
+        "pagePath": "pages/contactus/contactus",
+        "text": "联系我们",
+        "iconPath": "/images/icon_phone-1.png",
+        "selectedIconPath": "/images/icon_phone.png"
+      }
+    ]
+  }
+}

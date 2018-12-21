@@ -1,0 +1,544 @@
+/**index.wxss**/
+page{
+  background-color: #FFF
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+}
+.flex-box-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column
+}
+.flex-box-btween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.flex-box-center{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.flex-box-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.pt20{
+  padding-top: 20rpx;
+}
+.pt40{
+  padding-top: 40rpx;
+}
+.pt80{
+  padding-top: 80rpx;
+}
+.pl30{
+  padding-left: 30rpx;
+}
+.pl40{
+  padding-left: 40rpx;
+}
+.pr40{
+  padding-right: 40rpx;
+}
+/* 首页轮播 */
+.hotnews-box{
+  padding: 20rpx 40rpx;
+}
+.hotnews-box .hotnews-tip{
+  background: url('http://zerocatimg.zhsjgroup.cn/notice01.png') no-repeat center center;
+  background-size: 100%;
+  width: 70rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  margin-right: 30rpx;
+}
+.hotnews{
+  font-size: 24rpx;
+  color: #9b9b9b;
+}
+.top-banner {
+    height: 330rpx;
+    padding: 0 40rpx;
+    flex-direction: column;
+    position: relative;
+}
+
+.banner-scroll {
+    width: 670rpx;
+    background: #999;
+    height: 330rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    box-shadow: 0px 5px 5px #D5D5D5;
+}
+
+.banner-scroll .slide-image {
+    width: 670rpx;
+    height: 330rpx;
+}
+.dotstyle{
+  position: absolute;
+  left: 40rpx;
+  right: 0;
+  bottom: 10rpx;
+}
+.dotstyle .dot{
+  width: 24rpx;
+  height: 6rpx;
+  margin-left: 10rpx;
+  background: url('http://zerocatimg.zhsjgroup.cn/point2.png') no-repeat center center;
+  background-size: 100%;
+}
+.dotstyle .dot.active{
+  width: 32rpx;
+  height: 6rpx;
+  margin-left: 10rpx;
+  background: url('http://zerocatimg.zhsjgroup.cn/point1.png') no-repeat center center;
+  background-size: 100%;
+}
+/* 公司简介 */
+
+.company-info {
+    width: 100%;
+    height: 492rpx;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-info .company-logo {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 50%;
+    margin-top: 125rpx;
+}
+
+.company-info .company-name {
+    margin-top: 20rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+
+
+.company-info .company-description {
+    margin-top: 18rpx;
+    font-size: 30rpx;
+    color: #646464;
+    text-align: center;
+    height: 70rpx;
+    overflow: hidden;
+    padding-left: 60rpx;
+    padding-right: 60rpx;
+    line-height: 70rpx;
+}
+
+.company-info .company-more {
+    position: relative;
+    width: 190rpx;
+    height: 64rpx;
+    border-radius: 64rpx;
+    background-color: #C62E2E;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: #FFF;
+    top: 30rpx;
+    line-height: 62rpx;
+    border: none;
+    z-index: 99;
+}
+
+
+/* 服务优势 */
+
+.company-service-close {
+    width: 100%;
+    height: 820rpx;
+    padding-top: 90rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.company-service-open {
+    width: 100%;
+    height: 100%;
+    padding-top: 90rpx;
+    position: relative;
+}
+
+.company-service-close .company-service-list,
+.company-service-open .company-service-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.service-list-item {
+    padding-bottom: 70rpx;
+    width: 235rpx;
+    height: 345rpx;
+    /* display: inline-block; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    padding-left: 70rpx;
+    padding-right: 70rpx;
+}
+
+.service-list-item image {
+    width: 150rpx;
+    height: 150rpx;
+    border: 2rpx solid #F5F5F5;
+    border-radius: 50%;
+    display: block;
+}
+
+.service-list-item .list-item-title {
+    width: 100%;
+    margin-top: 40rpx;
+    font-size: 28rpx;
+    height: 40rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+.service-list-item .list-item-desc {
+    width: 100%;
+    margin-top: 20rpx;
+    font-size: 22rpx;
+    color: #969696;
+    height: 86rpx;
+    overflow-y: hidden;
+}
+
+.company-service-close .service-more-close,
+.company-service-open .service-more-open {
+    width: 100%;
+    height: 64rpx;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: #FFF;
+    line-height: 62rpx;
+    border: none;
+    z-index: 999;
+}
+
+.company-service-close .service-more-close {
+    position: relative;
+    bottom: 45rpx;
+}
+
+.company-service-open .service-more-open {
+    position: relative;
+}
+
+.service-more-close image {
+    transform: rotate(90deg);
+    position: absolute;
+    width: 26rpx;
+    height: 46rpx;
+    left: 50%;
+    transition: .5s;
+}
+
+.service-more-open image {
+    transform: rotate(270deg);
+    position: relative;
+    width: 26rpx;
+    height: 46rpx;
+    /* bottom: 64rpx; */
+    left: 50%;
+    transition: .5s;
+}
+
+
+/* 商城商品展示 */
+.reserve-swiper{
+  width: 100%;
+  height: 230rpx;
+  margin-top: 40rpx;
+}
+.reserve-store {
+    width: 100%;
+}
+.verticalline{
+  width: 4rpx;
+  height: 30rpx;
+  background-color: #C62E2E;
+  margin-right: 20rpx;
+}
+.reserve-title {
+    padding: 0 40rpx;
+    margin-top: 30rpx;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+.reserve-box{
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center
+}
+.reserve-box .active{
+  background: url('http://zerocatimg.zhsjgroup.cn/home-bg.png') no-repeat center center;
+  background-size: 50%;
+  display: flex
+}
+.reserve-box .reserve-list{
+  width: 508rpx;
+  height: 133rpx;
+  padding:40rpx;
+  background: url('http://zerocatimg.zhsjgroup.cn/0.9bg.png') no-repeat center center;
+  background-size: contain;
+  display: flex
+}
+.reserve-img{
+  width: 62rpx;
+  height: 112rpx;
+  padding-left: 40rpx;
+}
+.reserve-box .title{
+  font-size: 32rpx;
+  color: #323232
+}
+.reserve-box .text{
+  font-size: 24rpx;
+  color: #b4b4b4;
+  padding-top: 20rpx
+}
+.reserveview {
+    height: 100%;
+}
+
+.reserve-pic {
+    display: flex;
+    margin-top: 20rpx;
+    height: 100%;
+}
+
+.reserve-pic-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.reserve-pic-item image {
+    width: 230rpx;
+    height: 460rpx;
+    margin: 30rpx;
+    /* height: 100%; */
+}
+
+.reserve-pic-item text {
+    position: absolute;
+    height: 46rpx;
+    width: 250rpx;
+    font-size: 26rpx;
+    text-align: center;
+    color: #1E1E1E;
+    opacity: 0.6;
+    top: 83%;
+    margin-left: 20rpx;
+    font-weight: bold;
+}
+
+
+/* 我的服务 */
+
+.company-advantage-list{
+  padding: 0 40rpx;
+  padding-top: 30rpx;
+  align-items: flex-start;
+}
+.advantage-title {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 30rpx 0;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+.adv-img {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.adv-text {
+  flex: 1;
+  padding-left: 40rpx;
+}
+
+.adv-text .adv-title,
+.adv-text .adv-desc {
+    display: block;
+}
+
+.adv-text .adv-title {
+    font-size: 32rpx;
+    color: #1E1E1E;
+}
+
+.adv-text .adv-desc {
+    font-size: 24rpx;
+    color: #9B9B9B;
+    line-height: 32rpx;
+    height: 96rpx;
+    overflow: hidden;
+    margin-top: 12rpx;
+}
+/* 喵家优势 */
+.adv-scroll-box{
+  width: 100%;
+  overflow-x: scroll;
+  padding-top: 40rpx;
+}
+.adv-scroll-box .adv-box{
+  padding-left: 40rpx;
+  width: 304rpx;
+}
+.adv-scroll-box .adv-box .box-bg{
+  background-color: #f5f5f5;
+  padding: 20rpx;
+}
+.adv-scroll-box .adv-img{
+  width: 88rpx;
+  height: 88rpx;
+}
+.adv-scroll-box .adv-title{
+  font-size: 26rpx;
+  color: #141414;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.adv-scroll-box .adv-desc{
+  font-size: 22rpx;
+  color: #969696;
+  line-height: 40rpx;
+  height: 120rpx;
+  overflow: hidden;
+}
+/* 荣誉墙 */
+
+.company-honor {
+    width: 100%;
+}
+
+.company-honor .honor-title {
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+.honorview {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.honor-pic {
+    display: flex;
+    margin-top: 20rpx;
+    height: 100%;
+}
+
+.honor-pic-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16rpx 0;
+    padding-left: 40rpx;
+}
+
+.honor-pic-item image {
+    width: 190rpx;
+    height: 250rpx;
+}
+
+
+/**招聘*/
+
+.company-recruit {
+    width: 100%;
+    overflow: hidden;
+}
+
+.recruit-title {
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #1E1E1E;
+}
+
+.company-recruit-list {
+    text-align: center;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.company-recruit-img{
+  width: 80rpx;
+  height: 80rpx;
+}
+.recruit-text-title {
+    text-align: left;
+    font-size: 34rpx;
+    color: #1E1E1E;
+    display: block;
+    overflow: hidden;
+}
+
+.recruit-leftbtn image {
+    width: 13rpx;
+    height: 23rpx;
+}
+
+.recruit-desc {
+    font-size: 24rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #969696;
+    display: block;
+    overflow: hidden;
+    width: 290rpx;
+    text-align: left;
+}
+.fixed-call{
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.fixed-call image{
+  width: 114rpx;
+  height: 114rpx;
+}

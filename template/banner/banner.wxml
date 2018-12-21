@@ -1,0 +1,16 @@
+<!--template/banner/banner.wxml-->
+<view class='box pt20'>
+<swiper indicator-dots="{{false}}"  circular="{{true}}" autoplay="{{true}}" previous-margin="{{'60rpx'}}" next-margin="{{'60rpx'}}" bindchange="swiperChange">
+  <block wx:for="{{listdata}}" wx:key="{{item.id}}">
+    <swiper-item class="reserve-box" >
+      <view class='reserve-list flex-box {{swiperIndex===index?"active":""}}' bindtap='Godetail' data-id='{{item.id}}'>
+        <image src='{{imgUrl+item.imgUrl}}' class='reserve-img'></image>
+        <view class='pl20 flexone'>
+          <view class='title'>{{item.title}}</view>
+          <view class='text'>{{item.detailContent}}</view>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+ </swiper>
+</view>

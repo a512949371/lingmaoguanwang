@@ -1,0 +1,38 @@
+/* pages/productlist/detail/detail.wxss */
+.flex-box{
+  display: flex;
+  align-items: center;
+}
+.flex-box-column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column
+}
+.flex-box-btween{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.flex-box-center{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.flex-box-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.pd40{
+  padding: 40rpx;
+}
+.pt40{
+  padding-top: 40rpx;
+}
+.shop-name{
+  text-align: center;
+  font-size: 32rpx;
+  color: #141414;
+  padding-bottom: 20rpx;
+}
